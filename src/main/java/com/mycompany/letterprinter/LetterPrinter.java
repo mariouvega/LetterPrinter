@@ -14,7 +14,7 @@ import java.util.*;
 
 class Letter {
     
-    private ArrayList<L> lines;
+    
     private String addedLine = "";
     private String from;
     private String to;
