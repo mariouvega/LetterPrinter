@@ -10,20 +10,14 @@ package com.mycompany.letterprinter;
  * @author mario
  */
 
-import java.util.*;
+import java.util.Scanner;
 
 class Letter {
     
-    
-    private String addedLine = "";
     private String from;
     private String to;
-    private String body = ""
-                + "Dear " + to + ":\n"
-                + "\n" + addedLine
-                + "\n"
-                + "Sincerly,\n"
-                + "\n" + from;
+    private String body = "";
+              
 
     public Letter(String from, String to) {  //constructor calling for just the from and to;
         this.from = from;
@@ -34,17 +28,16 @@ class Letter {
 
     public void addLine(String line) //This method adds a new line plus the string that is sent in
     {
-        String tmpLine =line;
-        
-        this.addedLine = line+"\n";
-        if(this.addedLine == tmpLine){
-            this.addedLine ="";
-        }
+        body += line + "\n";
     }
 
     public String getText() //This method prints our information in a pre-defined format
     {
-        return body;
+        return  "Dear " + to + ":\n"
+                + "\n" + body
+                + "\n"
+                + "Sincerly,\n"
+                + "\n" + from;
     }
 
 
